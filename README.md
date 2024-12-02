@@ -1,15 +1,49 @@
 # AI Recipe Classifier
 
-This repository contains code and documentation for an AI recipe classifier developed to categorise recipes into difficulty levels, including "Easy," "Medium," "Hard," and "Very Hard." The classifier is built using Python and various machine learning (ML) techniques. This README file provides an overview of the project and its components.
+## **Project Overview**
+This project introduces an innovative **AI-powered recipe difficulty classifier**, designed to categorise recipes into one of four levels: **Easy, Medium, Hard, or Very Hard**. By analysing ingredients and preparation steps, the model empowers users to make informed culinary decisions based on their skills and time constraints. The classifier demonstrates the application of **Natural Language Processing (NLP)** and **machine learning (ML)** to streamline the culinary experience.
 
-## Model Development
+---
 
-- **Programming Language**: Python
-- **Libraries Used**: Pandas, Scikit-learn
+## **Motivation**
+Cooking can be intimidating, especially when recipe difficulty levels are unclear. This project aims to:
+1. **Simplify Culinary Choices**: Help users select recipes that align with their skill levels and available time.
+2. **Demonstrate AI Applications**: Showcase the use of NLP and ML in real-world applications like recipe analysis.
+3. **Support Culinary Accessibility**: Provide a scalable solution that caters to diverse cuisines and dietary preferences.
 
-### Dataset Pre-processing
-The Pandas library was used for dataset loading and pre-processing to ensure that the data is structured appropriately for model training. Special attention was given to handling NaN values within the text data to avoid adverse impacts on model training.
+---
 
+## **Dataset Description**
+- **Source**: The dataset is sourced from **RecipeNLG**, a large collection of recipes with detailed ingredients and instructions.
+- **Structure**:
+  - Recipes include textual descriptions, a list of ingredients, and preparation steps.
+  - Labels indicate difficulty levels, either provided or inferred based on analysis.
+- **Pre-processing**:
+  - Text cleaning: Removed special characters, numbers, and extra spaces.
+  - Tokenisation: Split sentences into words for processing.
+  - Lemmatization: Normalised words to their base forms.
+
+---
+
+## **Model Architectures**
+
+### **1. Feature Engineering**
+- **Text Representation**:
+  - **TF-IDF**: Captured term frequency and inverse document frequency to represent recipe text.
+  - **Word2Vec**: Created vector embeddings for semantic analysis of ingredients and instructions.
+  - **BERT**: Used pre-trained transformers for contextual word representations.
+
+### **2. Machine Learning Models**
+- **Logistic Regression**:
+  - Served as a baseline classifier.
+- **Random Forest**:
+  - Provided a robust approach to handle non-linear patterns.
+- **Gradient Boosting (XGBoost)**:
+  - Leveraged sequential decision trees for improved predictions.
+- **Neural Networks**:
+  - Used dense layers for capturing complex relationships in text data.
+
+---
 ### Label Assignment
 
 Before model training, difficulty levels were programmatically assigned to each recipe based on:
@@ -18,14 +52,6 @@ Before model training, difficulty levels were programmatically assigned to each 
 - **Ingredient Diversity**: Number of unique ingredients used.
 
 These metrics were normalised and weighted to compute a "Total Complexity" score for each recipe. Recipes were then categorised into difficulty levels ("Easy", "Medium", "Hard", "Very Hard") based on the quantiles of this score, resulting in well-balanced labels.
-
-### Model Training and Evaluation
-
-A text classification model was developed using a Random Forest Classifier and TF-IDF Vectorisation. The features considered for model training were the complexity metrics calculated earlier. The model was evaluated using k-fold cross-validation and a separate test set, achieving high accuracy scores:
-- Mean Cross-Validation Accuracy: ~99.28%
-- Test Accuracy: ~99.33%
-
-These results indicate that the difficulty level labels assigned to the text data are highly accurate and reliable.
 
 ## Performance across ML Models
 Various ML and deep learning models were trained and evaluated, including Baseline (Dummy Classifier), Logistic Regression, Gradient Boosting Classifier, Random Forest Classifier, Multi-Layer Perceptron (MLP), Convolutional Neural Network (CNN), Recurrent Neural Network (RNN), Support Vector Machine (SVM), Naive Bayes, and Custom Neural Network (NN).
@@ -56,6 +82,38 @@ LIME (Local Interpretable Model-agnostic Explanations) was used to interpret the
 
 LIME also highlighted influential words in the text, such as "mixtury", "ingredi", "side", "tomato", and "crumb", which played a significant role in the prediction. This information helps us understand why the model made a particular prediction and can be valuable for model debugging and improvement.
 
-Please refer to the [GitHub repository](https://github.com/drnsmith/AI-Recipe-Classifier.git) for the complete code and detailed documentation. Contributions are welcome to expand the repository and support a wide range of use cases.
+## Contributing
+Contributions are welcome! If you have ideas or improvements to share, please follow these steps:
+
+1. **Fork the Repository:**
+Create your own copy of the repository by clicking the "Fork" button at the top right of this page.
+
+2. **Create a Feature Branch:**
+Work on your changes in a dedicated branch.
+
+```bash
+git checkout -b feature/YourFeatureName
+```
+3. **Commit Your Changes:**
+Write clear and concise commit messages explaining what you’ve done.
+
+```bash
+git commit -m "Add YourFeatureName"
+```
+4. **Push Your Changes:**
+Push your feature branch to your forked repository.
+```bash
+git push origin feature/YourFeatureName
+```
+5. **Open a Pull Request:**
+Submit your changes to the main repository by opening a pull request (PR). Ensure your PR description explains your changes clearly.
+
+6. **Review and Feedback:**
+I will review your PR and may suggest improvements before merging it into the main branch.
+
+Thank you for your interest in contributing!
+
+## License
+Distributed under the MIT License. See `LICENSE` for more information.
 
 **Note**: This README provides a high-level overview. Detailed code can be found in the GitHub repository.
