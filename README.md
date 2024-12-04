@@ -1,11 +1,11 @@
-# AI Recipe Classifier
+### AI-Powered Recipe Difficulty Classification with NLP and Machine Learning
 
-## **Project Overview**
+#### **Overview**
 This project introduces an innovative **AI-powered recipe difficulty classifier**, designed to categorise recipes into one of four levels: **Easy, Medium, Hard, or Very Hard**. By analysing ingredients and preparation steps, the model empowers users to make informed culinary decisions based on their skills and time constraints. The classifier demonstrates the application of **Natural Language Processing (NLP)** and **machine learning (ML)** to streamline the culinary experience.
 
 ---
 
-## **Motivation**
+#### **Motivation**
 Cooking can be intimidating, especially when recipe difficulty levels are unclear. This project aims to:
 1. **Simplify Culinary Choices**: Help users select recipes that align with their skill levels and available time.
 2. **Demonstrate AI Applications**: Showcase the use of NLP and ML in real-world applications like recipe analysis.
