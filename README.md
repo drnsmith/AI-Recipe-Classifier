@@ -82,6 +82,15 @@ LIME (Local Interpretable Model-agnostic Explanations) was used to interpret the
 
 LIME also highlighted influential words in the text, such as "mixtury", "ingredi", "side", "tomato", and "crumb", which played a significant role in the prediction. This information helps us understand why the model made a particular prediction and can be valuable for model debugging and improvement.
 
+---
+### Productisation  
+The AI-powered recipe difficulty classifier can be transformed into a **personalised cooking assistant**, integrating with **recipe websites, mobile apps, and smart kitchen devices**. By leveraging **real-time NLP analysis**, the system can dynamically **adjust recipe difficulty levels based on user preferences, available ingredients, and past cooking history**. Expanding the platform to support **voice assistants and interactive cooking tutorials** would make it a valuable tool for both beginner and experienced home cooks.
+
+### Monetisation  
+This project can be monetised through **subscription-based API licensing**, allowing food bloggers, recipe platforms, and meal kit services to incorporate **AI-driven difficulty classification into their applications**. Additionally, a **premium mobile app** offering **AI-powered meal recommendations, step-by-step guidance, and difficulty-based recipe filtering** can generate revenue through **freemium models, in-app purchases, and affiliate partnerships with grocery retailers**.
+
+---
+
 ## Contributing
 Contributions are welcome! If you have ideas or improvements to share, please follow these steps:
 
